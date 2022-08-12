@@ -11,7 +11,7 @@ spec:
   releaseName: myRelease
   chart:
     git: ssh://git@github.com/arunima297/finalexam
-    ref: main
+    ref: master
     path: devops-finals
   values:
     ingress:
