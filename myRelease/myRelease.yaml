@@ -1,0 +1,18 @@
+---
+apiVersion: helm.fluxcd.io/v1
+kind: Helmrelease
+metadata:
+  name: myRelease
+  namespace: default
+  annotations:
+    fluxcd.io/automated: "false"
+    fluxcd.io/tag.chart-image: glob:3.1.1-debian-9-*
+spec:
+  releaseName: myRelease
+  chart:
+    git: ssh://git@github.com/arunima297/finalexam
+    ref: main
+    path: devops-finals
+  values:
+    ingress:
+      enabled: false
